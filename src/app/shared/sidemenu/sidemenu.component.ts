@@ -25,4 +25,10 @@ export class SidemenuComponent {
     //   .filter( route => !route.path?.includes(':') )
     // console.log(dashboardRoutes);
   }
+  logout() {
+    // Aquí puedes colocar la lógica para cerrar sesión, como eliminar el token de autenticación y redirigir al inicio de sesión
+    console.log("Sesión cerrada");
+    // Redirigir al inicio de sesión u otra acción
+  }
+
 }

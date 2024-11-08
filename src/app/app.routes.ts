@@ -6,42 +6,47 @@ export const routes: Routes = [
     loadComponent: () => import('./dashboard/dashboard.component'),
     children: [
       {
+        path: 'dashboard-nph',
+        title: 'Dashboard',
+        loadComponent: () => import('./dashboard/pages/dashboard/dashboard.component'),
+      },
+      {
         path: 'change-detection',
-        title: 'Change Detection',
+        title: 'Proveedor',
         loadComponent: () => import('./dashboard/pages/change-detection/change-detection.component'),
       },
       {
         path: 'control-flow',
-        title: 'Control Flow',
+        title: 'Galpon',
         loadComponent: () => import('./dashboard/pages/control-flow/control-flow.component'),
       },
       {
         path: 'defer-options',
-        title: 'Defer Options',
+        title: 'Alimento',
         loadComponent: () => import('./dashboard/pages/defer-options/defer-options.component'),
       },
       {
         path: 'defer-views',
-        title: 'Defer Views',
+        title: 'Vacuna',
         loadComponent: () => import('./dashboard/pages/defer-views/defer-views.component'),
       },
       {
-        path: 'user/:id',
-        title: 'User View',
+        path: 'user',
+        title: 'Casa',
         loadComponent: () => import('./dashboard/pages/user/user.component'),
       },
       {
         path: 'user-list',
-        title: 'User List',
+        title: 'Producto',
         loadComponent: () => import('./dashboard/pages/users/users.component'),
       },
       {
         path: 'view-transition',
-        title: 'View Transition',
+        title: 'Ciclo de Vida',
         loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component'),
       },
       {
-        path:'', redirectTo: 'control-flow', pathMatch: 'full',
+        path:'', redirectTo: 'dashboard-nph', pathMatch: 'full',
       }
     ]
   },
